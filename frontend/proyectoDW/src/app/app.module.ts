@@ -8,11 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegistroUsuariosComponent } from './components/registro-usuarios/registro-usuarios.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistroUsuariosComponent
+    RegistroUsuariosComponent,
+    IniciarSesionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
