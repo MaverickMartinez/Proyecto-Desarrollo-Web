@@ -10,8 +10,9 @@ import { RegistroUsuariosComponent } from './components/registro-usuarios/regist
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HomeComponent } from './components/home/home.component';
-import { PerfilUsuarioComponent } from './componets/perfil-usuario/perfil-usuario.component';
 import { EditarPerfilComponent } from './components/editar-perfil/editar-perfil.component';
+import { PerfilUsuariosComponent } from './components/perfil-usuarios/perfil-usuarios.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,9 @@ import { EditarPerfilComponent } from './components/editar-perfil/editar-perfil.
     RegistroUsuariosComponent,
     IniciarSesionComponent,
     HomeComponent,
-    PerfilUsuarioComponent,
-    EditarPerfilComponent
+    EditarPerfilComponent,
+    PerfilUsuariosComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
