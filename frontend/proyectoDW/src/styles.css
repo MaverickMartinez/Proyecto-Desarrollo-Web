@@ -22,10 +22,10 @@
     width:100%;
 }
 
-/*
+
 .letra{
 
-    font-family: 'fuente1';
+    /*font-family: 'fuente1';*/
     font-size: xx-large;
     color: white;
     margin-left: 10px;
@@ -36,7 +36,6 @@
     font-size: medium;
     font-weight:bold;
     
-
 }
 
 .letra:hover{
@@ -111,8 +110,6 @@
     border-radius: 8px;
     border-color: rgb(81, 81, 250);
 }
-
-
 
 .logo{
     display:block;

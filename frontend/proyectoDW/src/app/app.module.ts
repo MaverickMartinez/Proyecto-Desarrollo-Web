@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { EditarPerfilComponent } from './components/editar-perfil/editar-perfil.component';
 import { PerfilUsuariosComponent } from './components/perfil-usuarios/perfil-usuarios.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

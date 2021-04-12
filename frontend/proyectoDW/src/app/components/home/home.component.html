@@ -7,7 +7,7 @@
 
             <form class="form-inline my-2 my-lg-0" style="margin-left: auto;">
                 <img src="../assets/images/usuario.png" class="ml-auto" style="width: 100px;">
-                <a data-toggle="modal" data-target="#perfilModal"><h6 class="letra">Nombre Usuario</h6></a>
+                <a class="nav-link" (click)="modalOpcionesUsuario(opcionesUsuario)"><h6 class="letra">Nombre Usuario</h6></a>
             </form>
         </div>
         </nav>
@@ -34,31 +34,27 @@
                 </div>
         
         </div>
-        <!-- 
-
-        <div class="footer">
-            <h5 class="ml-auto mr-auto">powered by Codem</h5>
-            <h6>@copyright 2021</h6>
-        </div>
-        -->
+        
 
         </main><!-- /.container -->
 
         
           
-          <!-- perfilModal -->
-          <div class="modal fade" id="perfilModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                
-                <div class="modal-body">
-                    <a href="../vistas/perfilUsuario.html"><h5 class="letra" style="color: black;">Ver perfíl</h5></a><hr>
-                    <a href="../../Proyecto-Desarrollo-Web/index.html"><h5 class="letra" style="color: black;">Cerrar sesión</h5></a>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
-                </div>
-              </div>
+          <!-- perfil NgbModal -->
+         
+          <ng-template #opcionesUsuario let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Opciones de usuario</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('click en x')">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-          </div>
-
+            <div class="modal-body">
+                <a class="nav-link" routerLink="/perfilUsuario" (click)="modal.close('cerrar modal')"><h6 class="letra" style="color: black;">Ver perfíl</h6></a><hr>
+                <a class="nav-link" routerLink="/landingPage" (click)="modal.close('cerrar modal')"><h6 class="letra" style="color: black;">Cerrar sesión</h6></a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" (click)="modal.close('cerrar  opciones de usuario')">Cerrar</button>
+            </div>
+          </ng-template>
+          
