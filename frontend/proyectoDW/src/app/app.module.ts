@@ -10,13 +10,17 @@ import { RegistroUsuariosComponent } from './components/registro-usuarios/regist
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HomeComponent } from './components/home/home.component';
+import { PerfilUsuarioComponent } from './componets/perfil-usuario/perfil-usuario.component';
+import { EditarPerfilComponent } from './components/editar-perfil/editar-perfil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroUsuariosComponent,
     IniciarSesionComponent,
-    HomeComponent
+    HomeComponent,
+    PerfilUsuarioComponent,
+    EditarPerfilComponent
   ],
   imports: [
     BrowserModule,
