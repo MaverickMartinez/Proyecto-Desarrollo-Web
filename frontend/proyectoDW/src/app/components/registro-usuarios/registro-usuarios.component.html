@@ -6,14 +6,18 @@
                 <section class="registro">
                     <img class="logo" src="../assets/images/logo.png" style="margin-bottom: 20px;">
                     <h4 style="text-align: center; margin-top: 5px;">Crear cuenta</h4>
-                    <h4 style="margin-top: 5px;">Correo electrónico</h4>
-                    <input type="text" class="input" placeholder="ejemplo@gmaol.com"><br>
-                    <h4 style="margin-top: 5px;">Contraseña</h4>
-                    <input type="text" class="input" placeholder="Ingrese su Contraseña"><br>
-                    <h4 style="margin-top: 5px;">Vuelve a ingresar tu contraseña</h4>
-                    <input type="text" class="input" placeholder="Ingrese su Contraseña"><br>
+
+                    <form [formGroup]="formularioRegistro">
+                        <h4 style="margin-top: 5px;">Correo electrónico</h4>
+                        <input type="text" class="input" placeholder="ejemplo@gmail.com" formControlName="correoRegistro"><br>
+                        <h4 style="margin-top: 5px;">Contraseña</h4>
+                        <input type="password" class="input" placeholder="Ingrese su Contraseña" formControlName="claveRegistro1"><br>
+                        <h4 style="margin-top: 5px;">Vuelve a ingresar tu contraseña</h4>
+                        <input type="password" class="input" placeholder="Ingrese su Contraseña" formControlName="claveRegistro2"><br>
+                    </form>
+
                     <div style="margin-top: 10px;">
-                     <a routerLink="/home" [routerLinkActive]="'active'"><button type="button" class="btn btn-success" style="margin-right: 10PX;">Crear cuenta</button></a>
+                     <a routerLink="/home" [routerLinkActive]="'active'"><button type="button" [disabled] = "!formularioRegistro.valid" class="btn btn-success" style="margin-right: 10PX;">Crear cuenta</button></a>
                      <a routerLink="/landingPage" [routerLinkActive]="'active'"><button type="button" class="btn btn-primary">Cancelar</button></a>
                    </div>
                 </section>

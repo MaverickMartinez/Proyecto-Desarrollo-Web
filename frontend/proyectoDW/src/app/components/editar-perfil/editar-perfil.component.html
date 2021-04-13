@@ -3,26 +3,34 @@
 <div class="container">
     <div class="row">
         <div class="col-12"> 
-            <section class="registro mt-5" style="height: 750px;">
+            <section class="registro mt-5" style="height: 835px;">
                 <img class="logo" src="../assets/images/usuario.png" style="margin-bottom: 20px; width: 150px;">
                 <h4 style="text-align: center; margin-top: 5px;">Editar perfíl</h4>
-                <h4 style="margin-top: 5px;">Nombre</h4>
-                <input type="text" class="input" placeholder="NombreUsuario"><br>
-                <h4 style="margin-top: 5px;">Correo</h4>
-                <input type="text" class="input" placeholder="ejemplo@gmail.com"><br>
-                <h4 style="margin-top: 5px;">Contraseña</h4>
-                <input type="text" class="input" placeholder="******"><br>
-                <h4 style="margin-top: 5px;">Plan actual</h4>
-                <select class="form-control">
-                    <option >Seleccione su nuevo plan</option>
-                    <option >Plan gratuito</option>
-                    <option >Plan socio</option>
-                    <option >Plan premium</option>
-                </select>
+
+                <form [formGroup]="formularioEditarPerfil">
+                        <h4 style="margin-top: 5px;">Nombre</h4>
+                        <input type="text" class="input" placeholder="NombreUsuario" formControlName="nombre"><br>
+                        <h4 style="margin-top: 5px;">Correo</h4>
+                        <input type="text" class="input" placeholder="ejemplo@gmail.com" formControlName="correoEditar"><br>
+                        <h4 style="margin-top: 5px;">Contraseña</h4>
+                        <input type="password" class="input" placeholder="******" formControlName="claveEditar1"><br>
+                        <h4 style="margin-top: 5px;">Repita su contraseña</h4>
+                        <input type="password" class="input" placeholder="******" formControlName="claveEditar2"><br>
+                        <h4 style="margin-top: 5px;">Plan actual</h4>
+                        <select class="form-control" formControlName="nuevoPlan">
+                            <option >Seleccione su nuevo plan</option>
+                            <option >Plan gratuito</option>
+                            <option >Plan socio</option>
+                            <option >Plan premium</option>
+                        </select>
+                </form>
+
                 <div style="margin-top: 30px;">
-                 <a  routerLink="/perfilUsuario"><button type="button" class="btn btn-success" style="margin-right: 10px;">Editar</button></a>
+                 <a  routerLink="/perfilUsuario"><button type="button" class="btn btn-success" [disabled] = "!formularioEditarPerfil.valid" style="margin-right: 10px;">Editar</button></a>
                  <a  routerLink="/home"><button type="button" class="btn btn-primary">Cancelar</button></a>
                </div>
+
+
             </section>
         </div>
     </div>
