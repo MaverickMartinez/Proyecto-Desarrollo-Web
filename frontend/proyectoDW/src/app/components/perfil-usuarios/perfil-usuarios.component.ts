@@ -9,7 +9,8 @@ export class PerfilUsuariosComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
+
+  
 
 }

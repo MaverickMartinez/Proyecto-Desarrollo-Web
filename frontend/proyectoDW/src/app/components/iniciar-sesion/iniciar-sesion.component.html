@@ -5,13 +5,24 @@
         <div class="col-12">
             <section class="login">
                 <img class="logo" src="../assets/images/logo.png" style="margin-bottom: 20px;">
-                <h4 style="text-align: center; margin-top: 5px;">Iniciar sesión</h4>
+                <h4 style="text-align: center; margin-top: 5px;" class="letra">Iniciar sesión</h4>
 
                         <form [formGroup]="formularioIniciarSesion">
-                            <h4 style="margin-top: 5px;">Correo electrónico</h4>
+
+                            <h4 style="margin-top: 5px;" class="letra">Correo electrónico</h4>
                             <input type="text" class="input" placeholder="ejemplo@gmail.com" id="correoInicio" formControlName="correoInicio"><br>
-                            <h4 style="margin-top: 5px;">Contraseña</h4>
+                            <div class="divError"  *ngIf="correoInicio.invalid && (correoInicio.dirty || correoInicio.touched)">
+                                <span *ngIf="correoInicio.errors.required"> * Campo obligatorio</span>
+                                <span *ngIf="correoInicio.errors.pattern">* Correo inválido</span>
+                            </div>
+
+                            <h4 style="margin-top: 5px;" class="letra">Contraseña</h4>
                             <input type="password" class="input" placeholder="Ingrese su Contraseña" id="claveInicio" formControlName="claveInicio"><br>
+                            <div class="divError"  *ngIf="claveInicio.invalid && (claveInicio.dirty || claveInicio.touched)">
+                                <span *ngIf="claveInicio.errors.required"> * Campo obligatorio</span>
+                                <span *ngIf="claveInicio.errors.maxlength">* Máximo  20 caracteres</span>
+                            </div>
+
                         </form>
 
                      <div style="margin-top: 10px;">

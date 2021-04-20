@@ -5,15 +5,43 @@
             <div class="col-12">
                 <section class="registro">
                     <img class="logo" src="../assets/images/logo.png" style="margin-bottom: 20px;">
-                    <h4 style="text-align: center; margin-top: 5px;">Crear cuenta</h4>
+                    <h4 style="text-align: center; margin-top: 5px;" class="letra">Crear cuenta</h4>
 
                     <form [formGroup]="formularioRegistro">
-                        <h4 style="margin-top: 5px;">Correo electrónico</h4>
+
+                        <h4 style="margin-top: 5px;"  class="letra">Nombre</h4>
+                        <input type="text" class="input" placeholder="Nombre" formControlName="nombreRegistro"><br>
+                        <div class="divError"  *ngIf="nombreRegistro.invalid && (nombreRegistro.dirty || nombreRegistro.touched)">
+                            <span *ngIf="nombreRegistro.errors.required"> * Campo obligatorio</span>
+                            <span *ngIf="nombreRegistro.errors.maxlength">* Máximo  20 caracteres</span>
+                        </div>
+                        
+
+
+                        <h4 style="margin-top: 5px;"  class="letra">Apellido</h4>
+                        <input type="text" class="input" placeholder="Apellido" formControlName="apellidoRegistro"><br>
+                        <div class="divError"  *ngIf="apellidoRegistro.invalid && (apellidoRegistro.dirty || apellidoRegistro.touched)">
+                            <span *ngIf="apellidoRegistro.errors.required"> * Campo obligatorio</span>
+                            <span *ngIf="apellidoRegistro.errors.maxlength">* Máximo  20 caracteres</span>
+                        </div>
+                        
+
+
+                        <h4 style="margin-top: 5px;"  class="letra">Correo electrónico</h4>
                         <input type="text" class="input" placeholder="ejemplo@gmail.com" formControlName="correoRegistro"><br>
-                        <h4 style="margin-top: 5px;">Contraseña</h4>
+                        <div class="divError"  *ngIf="correoRegistro.invalid && (correoRegistro.dirty || correoRegistro.touched)">
+                            <span *ngIf="correoRegistro.errors.required"> * Campo obligatorio</span>
+                            <span *ngIf="correoRegistro.errors.pattern">* Correo inválido</span>
+                        </div>
+                        
+
+                        <h4 style="margin-top: 5px;"  class="letra">Ingresa tu contraseña</h4>
                         <input type="password" class="input" placeholder="Ingrese su Contraseña" formControlName="claveRegistro1"><br>
-                        <h4 style="margin-top: 5px;">Vuelve a ingresar tu contraseña</h4>
-                        <input type="password" class="input" placeholder="Ingrese su Contraseña" formControlName="claveRegistro2"><br>
+                        <div class="divError"  *ngIf="claveRegistro1.invalid && (claveRegistro1.dirty || claveRegistro1.touched)">
+                            <span *ngIf="claveRegistro1.errors.required"> * Campo obligatorio</span>
+                            <span *ngIf="claveRegistro1.errors.maxlength">* Máximo  20 caracteres</span>
+                        </div>
+                        
                     </form>
 
                     <div style="margin-top: 10px;">
@@ -25,8 +53,9 @@
 
         </div>
     </div>
-    
 
+   
+    
 
 
 

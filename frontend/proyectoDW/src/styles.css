@@ -1,31 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-/*
+
 @font-face{
     font-family: 'fuente1';
-    src: url('../fonts/PatrickHand-Regular.ttf');
+    src: url('../public/fonts/PatrickHand-Regular.ttf');
 }
-*/
+
 
 .barraHome{
     background-color: #2a94d6;
 }
 
-.footer{
-    height:50px;
-    line-height:50px;
-    background-color: #2a94d6;
-    color:white;
-    text-align:center;
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-}
-
 
 .letra{
 
-    /*font-family: 'fuente1';*/
+    font-family: 'fuente1';
     font-size: xx-large;
     color: white;
     margin-left: 10px;
@@ -79,7 +67,7 @@
     background-color:#a7dafa;
     color: #fff;
     width: 400px;
-    height: 500px;
+    height: 550px;
     border-radius: 5px;
     padding: 30px 60px;
     margin-left: auto;
@@ -92,7 +80,7 @@
     background-color:#a7dafa;
     color: #fff;
     width: 500px;
-    height: 600px;
+    height: 800px;
     border-radius: 5px;
     padding: 30px 60px;
     margin-left: auto;
@@ -117,3 +105,11 @@
     margin-right: auto;
 }
 
+.divError{
+    color: red;
+    background-color: #FFBABA;
+    border-radius: 10px;
+    border-width: 5px;
+    width: 200px;
+
+}
